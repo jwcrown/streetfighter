@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <link rel="stylesheet" href="styles.css">
+
+        <script>
+            $(document).ready(function(){
+                $(".selectors").hide();
+                // $(".startpage").show();
+                
+                $(".startpage").click(function(){
+                    $(".selectors").show();
+                    $(".startpage").html("");                    
+                })
+                
+                $("#space").hover(function(){
+                    $(".background").css("background-image", "url(img/space.png)");
+                },function(){
+                    $(".background").css("background", "none")});
+                $("#temple").hover(function(){
+                    $(".background").css("background-image", "url(img/temple.png)");
+                },function(){
+                    $(".background").css("background", "none")});
+
+                $("#stadium").hover(function(){
+                    $(".background").css("background-image", "url(img/stadium.png)");
+                },function(){
+                    $(".background").css("background", "none")});
+
+                $("#volcano").hover(function(){
+                    $(".background").css("background-image", "url(img/volcano.png)");
+                },function(){
+                    $(".background").css("background", "none")}
+                );
+
+                $("#colosseum").hover(function(){
+                    $(".background").css("background-image", "url(img/colosseum.png)");
+                },function(){
+                    $(".background").css("background", "none")});
+
+                $("#cave").hover(function(){
+                    $(".background").css("background-image", "url(img/cave.png)");
+                },function(){
+                    $(".background").css("background", "none")});
+
+                    // arena clicks
+
+                $("#space").click(function(){
+                    $(".background").css("background-image", "url(img/space.png)");
+                });
+
+                $("#temple").click(function(){
+                    $(".background").css("background-image", "url(img/temple.png)");
+                });
+                   
+                $("#stadium").click(function(){
+                    $(".background").css("background-image", "url(img/stadium.png)");
+                });
+                   
+                $("#volcano").click(function(){
+                    $(".background").css("background-image", "url(img/volcano.png)");
+                });
+
+                $("#colosseum").click(function(){
+                    $(".background").css("background-image", "url(img/colosseum.png)");
+                });
+
+                $("#cave").click(function(){
+                    $(".background").css("background-image", "url(img/cave.png)");
+                });
+
+                $("button").click(function(){
+                    $("button").remove();
+                    $('h1').text("Select Your Character");
+                    $('#selectbox').append('<img id="blanka" src="img/Blanka_p.png" alt="picture of Blanka">');
+                    $('#selectbox').append('<img id="chun_li" src="img/Chun_Li_p.png" alt="picture of Chun-Li">');
+                    $('#selectbox').append('<img id="dhalsim" src="img/Dhalsim_p.png" alt="picture of Dhalsim">');
+                    $('#selectbox').append('<img id="guile" src="img/Guile_p.png" alt="picture of Guile">');
+                    $('#selectbox').append('<img id="honda" src="img/Honda_p.png" alt="picture of Honda">');
+                    $('#selectbox').append('<img id="ken" src="img/Ken_p.png" alt="picture of Ken">');
+                    $('#selectbox').append('<img id="ryu" src="img/Ryu_p.png" alt="picture of Ryu">');
+                    $('#selectbox').append('<img id="zangief" src="img/Zangief_p.png" alt="picture of Zangief">');
+                });
+
+                $(document).on("click", "#blanka", function(){
+                    if($(".characters").find("img").length > 0){
+                        $(".characters2").append('<img src="img/Blanka.png" alt="picture of blanka">');
+                        $("#selectbox").remove();                                
+                    } else{
+                        $(".characters").append('<img src="img/Blanka.png" alt="picture of blanka">');
+                    }
+                });
+
+                $(document).on("click", "#chun_li", function(){
+                    if($(".characters").find("img").length > 0){
+                        $(".characters2").append('<img src="img/Chun_Li.png" alt="picture of Chun-Li">');
+                        $("#selectbox").remove();                                  
+                    } else{
+                        $(".characters").append('<img src="img/Chun_Li.png" alt="picture of Chun-Li">');
+                    }
+                });
+
+                $(document).on("click", "#dhalsim", function(){
+                    if($(".characters").find("img").length > 0){
+                        $(".characters2").append('<img src="img/Dhalsim.png" alt="picture of Chun-Li">');
+                        $("#selectbox").remove();                                 
+                    } else{
+                        $(".characters").append('<img src="img/Dhalsim.png" alt="picture of Chun-Li">');
+                    }
+                });
+
+                $(document).on("click", "#guile", function(){
+                    if($(".characters").find("img").length > 0){
+                        $(".characters2").append('<img src="img/Guile.png" alt="picture of Chun-Li">');
+                        $("#selectbox").remove();                                  
+                    } else{
+                        $(".characters").append('<img src="img/Guile.png" alt="picture of Chun-Li">');
+                    }
+                });
+
+                $(document).on("click", "#honda", function(){
+                    if($(".characters").find("img").length > 0){
+                        $(".characters2").append('<img src="img/Honda.png" alt="picture of Chun-Li">');
+                        $("#selectbox").remove();                                  
+                    } else{
+                        $(".characters").append('<img src="img/Honda.png" alt="picture of Chun-Li">');
+                    }
+                });
+
+                $(document).on("click", "#ken", function(){
+                    if($(".characters").find("img").length > 0){
+                        $(".characters2").append('<img src="img/Ken.png" alt="picture of Chun-Li">');
+                        $("#selectbox").remove();                                  
+                    } else{
+                        $(".characters").append('<img src="img/Ken.png" alt="picture of Chun-Li">');
+                    }
+                });
+
+                $(document).on("click", "#ryu", function(){
+                    if($(".characters").find("img").length > 0){
+                        $(".characters2").append('<img src="img/Ryu.png" alt="picture of Chun-Li">');
+                        $("#selectbox").remove();                                  
+                    } else{
+                        $(".characters").append('<img src="img/Ryu.png" alt="picture of Chun-Li">');
+                    }
+                });
+
+                $(document).on("click", "#zangief", function(){
+                    if($(".characters").find("img").length > 0){
+                        $(".characters2").append('<img src="img/Zangief.png" alt="picture of Chun-Li">');
+                        $("#selectbox").remove();                                  
+                    } else{
+                        $(".characters").append('<img src="img/Zangief.png" alt="picture of Chun-Li">');
+                    }
+                });
+            })
+        </script>
+
+    </head>
+        
+    <body>
+        <div id="wrapper">
+            <div class="startpage">
+                <img id="startlogo" src="img/logo.png" alt="start logo">
+                <h3>Click anywhere to start.</h3>  
+                <img src="img/video.gif" alt="gif">
+            </div>
+            <div class="selectors">
+                <div class="background">
+                    <div id="selectbox">
+                        <h1>Select Arena</h1>                    
+                        <button id="space">Space</button>
+                        <button id="temple">Temple</button>
+                        <button id="stadium">Stadium</button>
+                        <button id="volcano">Volcano</button>
+                        <button id="colosseum">Colosseum</button>
+                        <button id="cave">Cave</button>                    
+                    </div>
+                    <div class="characters">
+                        
+                    </div>
+                    <div class="characters2">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
